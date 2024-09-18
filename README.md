@@ -21,5 +21,5 @@ This repository contains code for an extractive summarization tool that generate
 
 ## How to use the code
 
-- **All the `html` files should be inside `templates` folder
-- **All the `css` files should ne inside `static` folder
+- **HTML**: All the `html` files should be inside `templates` folder
+- **CSS**: All the `css` files should ne inside `static` folder
