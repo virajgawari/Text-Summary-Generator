@@ -18,3 +18,8 @@ This repository contains code for an extractive summarization tool that generate
 
 - **May Not Capture Overall Meaning**: The approach may occasionally miss the underlying theme or coherence of the original text.
 - **Limited Creativity**: Since it does not generate new text, it cannot provide insights or interpretations beyond what is explicitly stated in the original text.
+
+## How to use the code
+
+- **All the `html` files should be inside `templates` folder
+- **All the `css` files should ne inside `static` folder
