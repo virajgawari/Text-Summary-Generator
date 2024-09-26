@@ -13,10 +13,11 @@ def summarize_text(text):
     sentences = sent_tokenize(text)
     if len(sentences) == 0:
         return ["No summary available."]
+    
     words = word_tokenize(text)
     stop_words = set(stopwords.words('english'))
     filtered_words = [word for word in words if word.lower() not in stop_words]
-   
+    
     stemmer = PorterStemmer()
     stemmed_words = [stemmer.stem(word) for word in filtered_words]
 
@@ -37,7 +38,10 @@ def summarize_text(text):
 def summarize():
     if request.method == "POST":
         text = request.form["text"]
-        summary = summarize_text(text)
+        if text.strip():
+            summary = summarize_text(text)
+        else:
+            summary = ["Please provide valid text for summarization."]
         return render_template("summary.html", summary=summary)
     else:
         return render_template("index.html")
